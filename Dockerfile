@@ -6,3 +6,6 @@ RUN yum -y install \
         mysql-community-server \
         redis \
     && yum -y clean all
+
+COPY . /
+RUN /scripts/mysql-init.sh
