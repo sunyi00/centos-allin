@@ -30,11 +30,11 @@ RUN yum -y install \
     && cd / \
     && curl -OL https://downloads.typesafe.com/typesafe-activator/1.3.6/typesafe-activator-1.3.6.zip \
     && unzip typesafe-activator-1.3.6.zip \
-    && chmod a+x /typesafe-activator-1.3.6/activator \
+    && chmod a+x /activator-dist-1.3.6/activator \
     && rm -f /typesafe-activator-1.3.6.zip
 
 
-ENV PATH $PATH:/typesafe-activator-1.3.6/
+ENV PATH $PATH:/activator-dist-1.3.6/
 
 COPY . /
 RUN /scripts/mysql-init.sh
